@@ -40,30 +40,6 @@ const Footer = () => {
                     className="h-[40px] w-[166px]"
                   />
                 </Link>
-                <div className="space-y-6">
-                  <div>
-                    <p className="text-tagline-2 text-background-11 mb-1 font-semibold">Address:</p>
-                    <p className="text-tagline-3 font-normal text-white/50">
-                      30 North Gould Street, Sheridan, WY 8280
-                    </p>
-                  </div>
-                  <div>
-                    <p className="text-tagline-2 text-background-11 mb-1 font-semibold">Contact:</p>
-                    <Link
-                      href="tel:+12025550130"
-                      className="text-tagline-3 inline-block font-normal text-white/50 transition-colors duration-300 hover:text-white hover:underline"
-                    >
-                      +1 (202) 555-0130
-                    </Link>
-                    <br />
-                    <Link
-                      href="mailto:hello@pixels71.com"
-                      className="text-tagline-3 inline-block font-normal text-white/50 transition-colors duration-300 hover:text-white hover:underline"
-                    >
-                      hello@pixels71.com
-                    </Link>
-                  </div>
-                </div>
                 <SocialIcons links={defaultSocialLinks} />
               </div>
             </RevealAnimation>
