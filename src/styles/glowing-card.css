@@ -1,0 +1,23 @@
+.glowing-card {
+  @apply relative z-5 overflow-hidden transition-all duration-500 ease-in-out;
+}
+
+.glowing-card::before {
+  @apply pointer-events-none absolute inset-0 z-20 rounded-[inherit] opacity-30 transition-all duration-300 ease-out content-[''] hover:opacity-60;
+  mix-blend-mode: plus-lighter;
+  background: radial-gradient(
+    100rem circle at var(--xPos, 50%) var(--yPos, 50%),
+    rgba(141, 89, 255, 0.5),
+    transparent 15%
+  );
+}
+
+.glowing-card::after {
+  @apply pointer-events-none absolute inset-0 z-20 rounded-[inherit] opacity-20 transition-all duration-500 ease-out content-[''] hover:opacity-40;
+  mix-blend-mode: plus-lighter;
+  background: radial-gradient(
+    60rem circle at var(--xPos, 50%) var(--yPos, 50%),
+    rgba(141, 89, 255, 0.8),
+    transparent 35%
+  );
+}

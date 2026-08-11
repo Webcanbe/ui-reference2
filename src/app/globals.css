@@ -1,0 +1,6 @@
+@import 'tailwindcss';
+@import '../styles/variable';
+@import '../styles/common';
+@import '../styles/typography';
+@import '../styles/icon-fonts';
+@import '../styles/glowing-card';

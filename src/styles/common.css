@@ -1,0 +1,182 @@
+/* =========== GLOBAL STYLES ========== */
+
+body {
+  @apply font-inter-tight antialiased;
+}
+
+[data-ns-animate] {
+  opacity: 0;
+}
+[data-ns-split-text] {
+  opacity: 0;
+  overflow: hidden;
+}
+
+/* ========== CONTAINER ========== */
+
+@utility main-container {
+  @apply lp:px-0 mx-auto max-w-[1290px] px-5;
+}
+
+@utility footer-link {
+  @apply relative overflow-hidden before:absolute before:bottom-0 before:left-0 before:h-px before:w-full before:origin-right before:scale-x-0 before:bg-white before:transition-transform before:duration-500 before:content-[''] hover:before:origin-left hover:before:scale-x-100;
+}
+
+.footer-title {
+  background: var(
+    --Gradient-12,
+    linear-gradient(180deg, rgba(255, 255, 255, 0.05) 0%, rgba(255, 255, 255, 0.2) 100%)
+  );
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+/*  =========================== Blog title underline hover effect =========================== */
+.underline-hover-effect .blog-title h3 {
+  @apply inline w-full cursor-pointer pb-px transition-all duration-500 ease-[cubic-bezier(0.645,0.045,0.355,1.000)];
+  background-image: linear-gradient(transparent calc(100% - 1px), white 1px);
+  @apply bg-size-[0%_100%] bg-no-repeat;
+}
+
+.underline-hover-effect:hover .blog-title h3 {
+  @apply bg-size-[100%_100%];
+}
+
+/* =========================== Image Loading Reveal =========================== */
+.image-loading-reveal img {
+  will-change: transform, clip-path;
+}
+
+/* =========================== MODAL =========================== */
+
+.modal-open {
+  @apply grid;
+}
+
+.modal-close {
+  @apply hidden;
+}
+
+/* Dialog element styling */
+dialog.modal-overlay {
+  border: none;
+  padding: 0;
+  background: transparent;
+}
+
+dialog.modal-overlay::backdrop {
+  background: rgba(0, 0, 0, 0.95);
+}
+
+dialog.modal-overlay.modal-close {
+  display: none;
+}
+
+/* =========================== Project details markdown =========================== */
+.project-details-markdown {
+  p {
+    @apply text-tagline-2 font-normal text-white/60;
+  }
+  h3 {
+    @apply lg:text-sora-heading-5 text-sora-heading-6 mt-10 mb-6 font-normal text-white md:mt-[70px];
+  }
+  h4 {
+    @apply lg:text-sora-heading-5 text-sora-heading-6 mb-1 font-normal text-white/80;
+  }
+  h3 + p,
+  h4 + p {
+    @apply mb-4;
+  }
+  ul {
+    @apply mb-2 list-inside list-disc space-y-2;
+  }
+  li {
+    @apply text-tagline-2 flex list-none items-center gap-x-2 font-normal text-white/60 before:block before:size-[6px] before:shrink-0 before:rounded-full before:bg-white before:content-[''];
+  }
+  li strong {
+    @apply text-tagline-1 font-normal text-white/80;
+  }
+}
+
+/* =========================== Service details markdown =========================== */
+.service-details-markdown {
+  p {
+    @apply text-tagline-2 font-normal text-white/60;
+  }
+
+  h3 {
+    @apply text-sora-heading-5 mt-10 font-normal text-white/90 md:mt-[70px];
+  }
+  ul {
+    @apply mt-4 space-y-2;
+    li {
+      @apply font-inter-tight text-tagline-3 flex items-center gap-x-2 font-normal text-white/80 before:block before:size-[7px] before:shrink-0 before:rounded-full before:bg-white before:content-[''];
+    }
+  }
+}
+
+/* =========================== Blog details markdown (HTML structure) =========================== */
+.blog-details-markdown {
+  h3 {
+    @apply font-sora text-sora-heading-5 mt-10 font-normal text-white first:mt-0 md:mt-[70px];
+  }
+  p {
+    @apply text-tagline-2 font-inter-tight font-normal text-white/60;
+  }
+
+  ul {
+    @apply mt-4 space-y-2;
+    li {
+      @apply font-inter-tight text-tagline-3 flex items-center gap-x-2 font-normal text-white/80 before:block before:size-[7px] before:shrink-0 before:rounded-full before:bg-white before:content-[''];
+    }
+  }
+
+  blockquote {
+    @apply bg-background-6 border-stroke-1/11 before:bg-opai-purple my-10 flex items-center gap-x-6 rounded-lg border p-6 before:block before:h-[90px] before:w-[2px] before:shrink-0 before:rounded-full before:content-[''] sm:my-[70px];
+    p {
+      @apply font-inter-tight text-tagline-1 text-[20px] text-white/90;
+    }
+  }
+  h3 + p {
+    @apply mt-1;
+  }
+}
+
+/* team details markdown style  */
+.team-details-markdown {
+  @apply mx-auto w-full max-w-[850px];
+
+  h3 {
+    @apply font-instrument-serif text-is-heading-5 mt-10 font-normal text-white/90 md:mt-18;
+  }
+
+  p {
+    @apply font-inter-tight text-tagline-2 font-normal text-white/60;
+  }
+
+  h3 + p {
+    @apply mt-1;
+  }
+
+  h4 {
+    @apply font-instrument-serif text-is-heading-6 mt-8 font-normal text-white/90;
+  }
+
+  h4 + p {
+    @apply mt-2;
+  }
+
+  h3 + ul {
+    @apply mt-2 space-y-1;
+  }
+
+  ul > li {
+    @apply font-inter-tight text-tagline-2 flex items-center gap-x-2 font-normal text-white/60 before:block before:size-1.5 before:rounded-full before:bg-white before:content-[''];
+  }
+}
+
+/* =========================== Text reveal =========================== */
+.text-reveal {
+  @apply relative inline-block overflow-hidden;
+}
